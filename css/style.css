@@ -19,7 +19,7 @@ html {
 }
 
 .card-part {
-    width: 80%;
+    width: 90%;
     margin: auto;
     overflow: auto;
     padding: 75px 0px;
@@ -29,70 +29,92 @@ html {
     width: 33.33%;
     margin: 0;
     float: left;
-    padding: 20px 10px;
+    padding: 30px 15px;
+    overflow: hidden;
 }
 
 .card-blog {
     height: 300px;
     width: 100%;
-    text-align: center;
+    margin: 0;
     border: 1px solid #808489;
+
+}
+
+.item {
+    height: 100%;
+    width: 100%;
     padding: 15px 20px;
 }
 
-.card-blog:hover {
-    border: 1px solid #d73e4d;
-}
-
-.card-blog:hover > .card-doc h4 {
-    color: #d73e4d;
-    transform: translateY(-70%);
-
-}
-
-.card-blog:hover > .card-img > .font {
-    color: #d73e4d;
-    transform: translateY(-75%);
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
-    background-color: #292929;
-    padding: 0px 20px;
-}
-
-.card-doc {
-    margin: 0;
+.card-img {
+    transform: translateY(60px);
+    text-align: center;
+    transition-duration: 0.2s;
 }
 
 .font {
     color: #6f6f6f;
     font-size: 48px;
     padding: 10px 0px;
+    margin: 0;
 }
 
-.card-doc h4 {
+.card-img h6 a {
     color: #6f6f6f;
     font-size: 18px;
     font-weight: 700;
     line-height: 19px;
     margin: 0;
     padding: 20px 0px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-.card-doc p {
+.item p {
     color: #fff;
     font-size: 14px;
     font-weight: 400;
     line-height: 26px;
     margin: 0;
     padding: 10px 0px;
+    opacity: 0;
+    transform: translate(0px, 35px);
+    text-align: center;
+    transition-delay: 0.2s;
 }
 
-.card-blog:hover > .card-doc p {
+.card-blog:hover {
+    border: 1px solid #d73e4d;
+}
+
+.item:hover > .card-img {
+    transform: translateY(-37px);
     transition-property: all;
-    transition-duration: 0.4s;
-    transition-delay: 3s;
+    transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
+    transition-delay: 0s;
 }
 
+.item:hover > .card-img h6 a {
+    color: #d73e4d;
+}
+
+.item:hover > .card-img > .font {
+    color: #d73e4d;
+    background-color: #292929;
+    padding: 0px 20px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.item:hover p {
+    transition-property: all;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.2s;
+    transform: translate(0px, -37px);
+    opacity: 1;
+}
